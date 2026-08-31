@@ -1,0 +1,355 @@
+/* CSS/modo_oscuro.css - Estilos Optimizados para Alto Contraste */
+
+/* ==========================================
+   1. FONDOS Y ESTRUCTURA BASE
+   ========================================== */
+body.tema-oscuro {
+    background-color: #18181b !important;
+    color: #ffffff !important;
+    color-scheme: dark;
+    --color-fondo: #18181b !important;
+    --color-texto: #ffffff !important;
+}
+
+body.tema-oscuro .login-box, 
+body.tema-oscuro .login-container, 
+body.tema-oscuro .box, 
+body.tema-oscuro .contenedor-recuperar, 
+body.tema-oscuro .contenedor-codigo,
+body.tema-oscuro .topbar, 
+body.tema-oscuro .filter-container, 
+body.tema-oscuro .table-card, 
+body.tema-oscuro .panel-perfil, 
+body.tema-oscuro .swal2-popup,
+body.tema-oscuro .card,
+body.tema-oscuro .info-box,
+body.tema-oscuro .detalle-box,
+body.tema-oscuro .wrapper,
+body.tema-oscuro .wrapper-content,
+body.tema-oscuro .tarjeta,
+body.tema-oscuro .tabla-global,
+body.tema-oscuro table,
+body.tema-oscuro .grafico-container,
+body.tema-oscuro .info-card, 
+body.tema-oscuro .step-container, 
+body.tema-oscuro .srv-reclamo,
+body.tema-oscuro .panel,
+body.tema-oscuro .radio-modo-container,
+body.tema-oscuro .permiso-grupo,
+body.tema-oscuro .sub-grupo,
+body.tema-oscuro .info-cliente,
+body.tema-oscuro .wrapper-card,
+body.tema-oscuro .step-header,
+body.tema-oscuro .total-box,
+body.tema-oscuro th {
+    background-color: #27272a !important;
+    background: #27272a !important; /* Fuerza la anulación de fondos en línea */
+    border-color: #3f3f46 !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.tema-oscuro .sidebar {
+    background-color: #1e1e1e !important;
+    border-right-color: #27272a !important;
+}
+
+body.tema-oscuro .tab-btn {
+    color: #ffffff !important;
+}
+
+body.tema-oscuro .tab-btn:hover,
+body.tema-oscuro .tab-btn.active {
+    background-color: #27272a !important;
+    background: #27272a !important;
+    color: var(--color-primario) !important;
+}
+
+body.tema-oscuro .info-divider {
+    background: #3f3f46 !important;
+}
+
+body.tema-oscuro .info-row {
+    color: #a1a1aa !important;
+}
+
+body.tema-oscuro .info-row strong {
+    color: #f4f4f5 !important;
+}
+
+/* ==========================================
+   2. TIPOGRAFÍA Y ETIQUETAS
+   ========================================== */
+body.tema-oscuro label, 
+body.tema-oscuro strong, 
+body.tema-oscuro b,
+body.tema-oscuro h1, 
+body.tema-oscuro h2, 
+body.tema-oscuro h3, 
+body.tema-oscuro h4, 
+body.tema-oscuro h5, 
+body.tema-oscuro h6,
+body.tema-oscuro .panel-title, 
+body.tema-oscuro .swal2-title, 
+body.tema-oscuro .swal2-html-container,
+body.tema-oscuro .user-info,
+body.tema-oscuro th,
+body.tema-oscuro td,
+body.tema-oscuro span,
+body.tema-oscuro li,
+body.tema-oscuro div,
+body.tema-oscuro p,
+body.tema-oscuro .tarjeta-titulo,
+body.tema-oscuro .panel h3,
+body.tema-oscuro .radio-modo-container label,
+body.tema-oscuro .grupo-titulo,
+body.tema-oscuro [style*="color: var(--color-primario)"],
+body.tema-oscuro [style*="color:var(--color-primario)"] {
+    color: #ffffff !important; 
+}
+
+/* Anulación de estilos en línea oscuros incrustados en HTML */
+body.tema-oscuro [style*="color: #333"], body.tema-oscuro [style*="color:#333"],
+body.tema-oscuro [style*="color: #555"], body.tema-oscuro [style*="color:#555"],
+body.tema-oscuro [style*="color: #666"], body.tema-oscuro [style*="color:#666"],
+body.tema-oscuro [style*="color: #777"], body.tema-oscuro [style*="color:#777"],
+body.tema-oscuro [style*="color: #888"], body.tema-oscuro [style*="color:#888"],
+body.tema-oscuro .ic-title,
+body.tema-oscuro .ic-sub, 
+body.tema-oscuro .srv-title {
+    color: #ffffff !important;
+}
+
+body.tema-oscuro .ic-value { 
+    color: #fff !important; 
+}
+
+/* Forzar anulación de fondos hardcodeados en HTML y CSS que quedaron blancos */
+body.tema-oscuro [style*="background-color: #fff"],
+body.tema-oscuro [style*="background-color:#fff"],
+body.tema-oscuro [style*="background: #fff"],
+body.tema-oscuro [style*="background:#fff"],
+body.tema-oscuro [style*="background-color: #f8f9fa"],
+body.tema-oscuro [style*="background: #f8f9fa"],
+body.tema-oscuro [style*="background-color: #fdfdfd"],
+body.tema-oscuro [style*="background: #fdfdfd"] {
+    background-color: #27272a !important;
+    background: #27272a !important;
+}
+
+/* Solucionar el hover de las tablas (animación al pasar el mouse) */
+body.tema-oscuro tr:hover,
+body.tema-oscuro tr:hover td,
+body.tema-oscuro .client-table tr:hover td,
+body.tema-oscuro table tbody tr:hover,
+body.tema-oscuro table tbody tr:hover td,
+body.tema-oscuro table tbody tr:hover th {
+    background-color: #3f3f46 !important;
+    background: #3f3f46 !important;
+}
+
+/* Evitar filas blancas explícitas o pares/impares */
+body.tema-oscuro tr,
+body.tema-oscuro tr:nth-child(even),
+body.tema-oscuro tr:nth-child(odd) {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* ==========================================
+   3. FORMULARIOS E INPUTS
+   ========================================== */
+body.tema-oscuro input, 
+body.tema-oscuro select, 
+body.tema-oscuro option,
+body.tema-oscuro textarea, 
+body.tema-oscuro .input-perfil,
+body.tema-oscuro .field-value, 
+body.tema-oscuro .srv-textarea {
+    background-color: #1e1e1e !important;
+    background: #1e1e1e !important;
+    color: #ffffff !important;
+    border: 1px solid #3f3f46 !important;
+}
+
+body.tema-oscuro input[type="date"]::-webkit-calendar-picker-indicator,
+body.tema-oscuro input[type="time"]::-webkit-calendar-picker-indicator {
+    /* filter: invert(1); color-scheme ya lo hace blanco */
+}
+
+body.tema-oscuro input:disabled, 
+body.tema-oscuro select:disabled, 
+body.tema-oscuro textarea:disabled,
+body.tema-oscuro input:disabled, 
+body.tema-oscuro select:disabled, 
+body.tema-oscuro textarea:disabled,
+body.tema-oscuro .input-readonly {
+    background-color: #27272a !important;
+    background: #27272a !important;
+    color: #a1a1aa !important;
+    border-color: #3f3f46 !important;
+}
+
+body.tema-oscuro input::placeholder,
+body.tema-oscuro textarea::placeholder {
+    color: #a1a1aa !important;
+}
+
+body.tema-oscuro input[readonly], 
+body.tema-oscuro select[readonly], 
+body.tema-oscuro textarea[readonly],
+body.tema-oscuro .input-perfil:disabled {
+    background-color: #27272a !important;
+    background: #27272a !important;
+    color: #71717a !important;
+    border: 1px dashed #3f3f46 !important;
+    opacity: 1 !important;
+    font-weight: 500 !important;
+}
+
+body.tema-oscuro input:focus, 
+body.tema-oscuro select:focus, 
+body.tema-oscuro textarea:focus, 
+body.tema-oscuro .input-perfil:focus {
+    border-color: var(--color-primario) !important;
+    outline: none !important;
+    background-color: #09090b !important;
+    background: #09090b !important;
+}
+
+/* ==========================================
+   4. TABLAS Y ENCABEZADOS
+   ========================================== */
+body.tema-oscuro th,
+body.tema-oscuro .step-header { 
+    background-color: #2a2a2a !important; 
+    background: #2a2a2a !important;
+    border-bottom: 2px solid #444 !important; 
+    color: #ffffff !important;
+}
+
+body.tema-oscuro td,
+body.tema-oscuro td span,
+body.tema-oscuro td strong,
+body.tema-oscuro td div,
+body.tema-oscuro td p { 
+    border-bottom: 1px solid #333 !important; 
+    color: #ffffff !important;
+}
+
+body.tema-oscuro td .badge-estado,
+body.tema-oscuro td .badge-prioridad,
+body.tema-oscuro td .badge-reclamo,
+body.tema-oscuro td .tab-btn {
+    /* Las badges y botones pueden tener su propio color, pero el texto normal debe ser blanco */
+}
+
+/* Badges de Alertas */
+body.tema-oscuro .badge-active,
+body.tema-oscuro .badge-alerta-enviadas {
+    background-color: rgba(40, 167, 69, 0.2) !important;
+    color: #75b798 !important;
+    border-color: rgba(40, 167, 69, 0.4) !important;
+}
+
+body.tema-oscuro .badge-inactive {
+    background-color: rgba(220, 53, 69, 0.2) !important;
+    color: #ea868f !important;
+    border-color: rgba(220, 53, 69, 0.4) !important;
+}
+
+body.tema-oscuro .badge-alerta-cola {
+    background-color: rgba(255, 193, 7, 0.2) !important;
+    color: #ffda6a !important;
+    border-color: rgba(255, 193, 7, 0.4) !important;
+}
+
+body.tema-oscuro tr:hover { 
+    background-color: #252525 !important; 
+}
+
+/* Evitar bordes blancos quemados en div de diseño */
+body.tema-oscuro [style*="border-left: 4px solid"] {
+    background-color: #1e1e1e !important;
+    background: #1e1e1e !important;
+}
+
+/* ==========================================
+   5. BOTONES Y ACCIONES
+   ========================================== */
+body.tema-oscuro .btn-clear, 
+body.tema-oscuro .btn-secondary, 
+body.tema-oscuro .btn-editar, 
+body.tema-oscuro .btn-ver,
+body.tema-oscuro .btn-back,
+body.tema-oscuro .btn-cancel,
+body.tema-oscuro .btn-return {
+    background-color: #333 !important; 
+    color: #e0e0e0 !important; 
+    border: 1px solid #444 !important;
+}
+
+body.tema-oscuro .btn-clear:hover, 
+body.tema-oscuro .btn-secondary:hover, 
+body.tema-oscuro .btn-editar:hover,
+body.tema-oscuro .btn-back:hover,
+body.tema-oscuro .btn-cancel:hover,
+body.tema-oscuro .btn-return:hover { 
+    background-color: #444 !important; 
+}
+
+body.tema-oscuro .btn-ver:hover { 
+    background-color: var(--color-primario) !important; 
+    color: #fff !important; 
+    border-color: var(--color-primario) !important;
+}
+
+/* ==========================================
+   6. BADGES, ESTADOS Y PRIORIDADES
+   ========================================== */
+body.tema-oscuro .badge-estado.est-1, 
+body.tema-oscuro .prio-alta, 
+body.tema-oscuro .badge-reclamo { 
+    background-color: rgba(220, 53, 69, 0.15) !important; 
+    color: #ff8791 !important; 
+    border: 1px solid rgba(220, 53, 69, 0.3) !important; 
+}
+
+body.tema-oscuro .badge-estado.est-2 { 
+    background-color: rgba(255, 193, 7, 0.15) !important; 
+    color: #ffda6a !important; 
+    border: 1px solid rgba(255, 193, 7, 0.3) !important; 
+}
+
+body.tema-oscuro .badge-estado.est-4 { 
+    background-color: rgba(253, 126, 20, 0.15) !important; 
+    color: #ffc078 !important; 
+    border: 1px solid rgba(253, 126, 20, 0.3) !important; 
+}
+
+body.tema-oscuro .badge-estado.est-5 { 
+    background-color: rgba(40, 167, 69, 0.15) !important; 
+    color: #75c98d !important; 
+    border: 1px solid rgba(40, 167, 69, 0.3) !important; 
+}
+
+body.tema-oscuro .prio-normal {
+    background-color: rgba(108, 117, 125, 0.2) !important;
+    color: #ced4da !important;
+    border: 1px solid rgba(108, 117, 125, 0.4) !important;
+}
+
+/* ==========================================
+   7. PAGINACIÓN
+   ========================================== */
+body.tema-oscuro .pagination-container .page-link:not(.active):not(.disabled),
+body.tema-oscuro .pagination .page-link:not(.active) { 
+    background-color: #2c2c2c !important; 
+    color: #e0e0e0 !important; 
+    border-color: #444 !important; 
+}
+
+body.tema-oscuro .pagination-container .page-link.disabled { 
+    background-color: #1e1e1e !important; 
+    color: #666 !important; 
+    border-color: #333 !important; 
+}

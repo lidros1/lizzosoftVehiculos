@@ -1,0 +1,654 @@
+/* ESTILO PARA LOGIN */
+.login-container {
+    max-width: 400px;
+    margin: 60px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 16px #bfc9d8;
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-container h2 {
+    font-size: 2em;
+    margin-bottom: 28px;
+    font-weight: bold;
+    color: #333;
+}
+
+.login-container label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.login-container input[type="text"],
+.login-container input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1.5px solid #bfc9d8;
+    border-radius: 8px;
+    font-size: 1em;
+    background: #f8fafc;
+    transition: border 0.2s;
+}
+
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+    border: 1.5px solid #5a5a5a;
+    outline: none;
+}
+
+.login-container button[type="submit"] {
+    background: #5a5a5a;
+    color: #fff;
+    font-size: 1.15em;
+    border-radius: 30px;
+    padding: 10px 40px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background 0.2s;
+}
+
+.login-container button[type="submit"]:hover {
+    background: #333;
+}
+
+.login-container p {
+    color: #d9534f;
+    margin-bottom: 18px;
+    font-weight: bold;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e8f0fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  width: 400px;
+}
+
+.titulo {
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #333;
+}
+
+.menu-botones {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.btn {
+  display: block;
+  padding: 12px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+.cerrar-sesion {
+  margin-top: 30px;
+}
+
+.btn.cerrar {
+  background-color: #d9534f;
+}
+
+.btn.cerrar:hover {
+  background-color: #c9302c;
+}
+.btn.volver {
+  background-color: #6c757d;
+}
+
+.btn.volver:hover {
+  background-color: #5a6268;
+}
+/* Centra el contenido de los formularios */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+/* Agrupa cada fila del formulario */
+.form-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  width: 100%;
+}
+
+/* Ajusta el label y el input */
+.form-row label {
+  min-width: 140px;
+  text-align: right;
+  margin-right: 10px;
+  font-size: 16px;
+}
+.form-row input[type="text"],
+.form-row input[type="password"] {
+  width: 220px;
+  padding: 7px 8px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Botones centrados y con espacio entre ellos */
+.botones-editar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  width: 100%;
+  margin-top: 18px;
+}
+
+/* Centra los botones individuales en formularios separados */
+form .btn,
+form .btn.volver {
+  margin: 18px auto 0 auto;
+  width: 180px;
+  display: block;
+  align-self: center;
+}
+
+/* Botón en línea (por ejemplo, el de editar contraseña) */
+.inline-btn {
+  margin-left: 10px;
+  width: auto;
+  min-width: 90px;
+}
+
+/* Mensaje de error o éxito */
+.mensaje-usuario {
+  color: #d9534f;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Ajuste para títulos dentro de formularios */
+form .titulo {
+  margin-bottom: 22px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 500px) {
+  .main-container {
+    width: 98vw;
+    padding: 10px;
+  }
+  .form-row label {
+    min-width: 90px;
+    font-size: 14px;
+  }
+  .form-row input[type="text"],
+  .form-row input[type="password"] {
+    width: 120px;
+    font-size: 13px;
+  }
+  form .btn,
+  form .btn.volver {
+    width: 98vw;
+    min-width: 120px;
+  }
+}
+/* Formulario de selección de campos */
+.campo-lista {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 18px 24px;
+    margin: 0 auto 28px auto;
+    width: 90%;
+    min-width: 320px;
+    max-width: 600px;
+    background: #fff;
+    text-align: left;
+    box-sizing: border-box;
+}
+.campo-lista label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.campo-lista legend {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+/* Asegura que la tabla no sobresalga del contenedor y sea responsive */
+.tabla-contenedor {
+    margin: 0 auto 28px auto;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.tabla-usuarios th, .tabla-usuarios td {
+    border: 1px solid #333;
+    padding: 8px 12px;
+    text-align: center;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.tabla-usuarios th {
+    background: #e8f0fe;
+    font-weight: bold;
+}
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 700px) {
+    .main-container {
+        width: 98vw;
+        padding: 10px;
+    }
+    .tabla-contenedor {
+        padding: 0;
+    }
+    .tabla-usuarios {
+        font-size: 13px;
+        min-width: 400px;
+    }
+}
+/* Solo para la pantalla de listar usuarios */
+.main-container-listar {
+  width: auto !important;
+  min-width: 320px;
+  max-width: none;
+  display: inline-block;
+  /* Centrado vertical y horizontal */
+  margin: 30px auto;
+}
+.tabla-contenedor {
+  width: 100%;
+  max-width: none;
+}
+.tabla-usuarios {
+  width: 100%;
+  min-width: 320px;
+  max-width: none;
+}
+/* Confirmación de eliminación de usuario */
+.confirmar-box {
+    border: 1px solid #bbb;
+    border-radius: 8px;
+    padding: 28px 24px 18px 24px;
+    margin: 40px auto 28px auto;
+    width: 350px;
+    background: #fff;
+    text-align: center;
+}
+
+.confirmar-botones {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    margin-top: 18px;
+}
+
+.btn-cancelar {
+    background: #757575;
+    color: #fff;
+}
+
+.btn-confirmar {
+    background: #e53935;
+    color: #fff;
+}
+/* Para los mensajes de error y éxito */
+.mensaje-usuario {
+    font-size: 15px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+/* Para los botones de editar funciones */
+.botones-editar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    width: 100%;
+    margin-top: 18px;
+}
+
+/* Para el fieldset de selección de campos */
+.campo-lista {
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    padding: 18px 24px;
+    margin: 0 auto 28px auto;
+    width: 320px;
+    background: #fff;
+    text-align: left;
+}
+.campo-lista label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.campo-lista legend {
+    font-size: 18px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+.main-container {
+    max-width: 600px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 8px;
+    padding: 30px 40px;
+    box-shadow: 0 0 10px #ccc;
+}
+.menu-botones {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 30px 0;
+}
+.btn {
+    background: #0094ff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 30px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin: 5px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+.btn.volver {
+    background: #555;
+}
+.form-row {
+    margin-bottom: 18px;
+    display: flex;
+    flex-direction: column;
+}
+.form-row label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.form-row input, .form-row select {
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    font-size: 1em;
+}
+.ayuda-campo {
+    font-size: 0.95em;
+    color: #666;
+    margin-top: 2px;
+    font-style: italic;
+}
+.mensaje-usuario {
+    font-size: 0.98em;
+    margin-left: 10px;
+}
+.main-container-listar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 0 16px #bfc9d8;
+    padding: 40px 30px 30px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*  Estilo para los listados  */
+
+.tabla-contenedorscroll {
+    width: 100%;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+}
+
+.tabla-personal{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    table-layout: auto;
+    font-size: 1.08em;
+}
+
+.tabla-personal th, .tabla-personal td {
+    border: 1.5px solid #bfc9d8;
+    padding: 12px 8px;
+    text-align: center;
+    white-space: nowrap;
+    max-width: 180px;
+    overflow: visible;
+    text-overflow: ellipsis;
+}
+
+.tabla-personal th {
+    background: #f2f2f2;
+    font-weight: bold;
+}
+
+.tabla-personal td {
+    background: #fff;
+}
+
+@media (max-width: 1100px) {
+    .main-container-listar {
+        max-width: 98vw;
+        padding: 10px;
+    }
+    .tabla-personal th, .tabla-personal td {
+        font-size: 0.98em;
+        padding: 8px 4px;
+    }
+}
+.checklist {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.area-funciones {
+    border: 1px solid #b3b3b3;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-bottom: 12px;
+    background: #f9f9f9;
+}
+.area-titulo {
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #2d4a6a;
+}
+.funcion-label {
+    display: block;
+    margin-left: 15px;
+    margin-bottom: 4px;
+    font-size: 0.97em;
+}
+.cliente-buscador {
+  margin-bottom: 25px; 
+}
+
+.seleccionar-btn { 
+  padding: 2px 10px; 
+}
+.main-container-listar .cliente-seleccionado { 
+  margin-bottom: 20px; 
+  background: #e8f6e8; 
+  padding: 10px; 
+  border-radius: 6px; 
+}
+/* Buscadores y planilla de registro de servicio */
+.buscador-lista {
+    border: 1px solid #ccc;
+    max-height: 120px;
+    overflow-y: auto;
+    background: #fff;
+    position: absolute;
+    z-index: 10;
+    width: 90%;
+}
+.buscador-lista div {
+    padding: 5px;
+    cursor: pointer;
+}
+.buscador-lista div:hover {
+    background: #eee;
+}
+.seleccionado {
+    background: #d9f7be;
+    padding: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+.btn-cancelar {
+    margin-left: 10px;
+    color: #fff;
+    background: #f5222d;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    padding: 2px 8px;
+}
+.servicio-row {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 3px;
+}
+.servicio-row select,
+.servicio-row input {
+    min-width: 100px;
+}
+.servicio-row .btn-quitar {
+    background: #f5222d;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.input-observacion-servicio {
+    background: #fff !important;
+    border: 1px solid #ccc !important;
+    pointer-events: auto !important;
+    color: #222 !important;
+    border-radius: 4px;
+    padding: 6px 8px;
+    font-size: 1em;
+    min-height: 32px;
+    max-width: 100%;
+    box-sizing: border-box;
+    width: 98% !important;
+    resize: none;
+    transition: height 0.2s;
+}
+
+/* --- ESTILOS MODO OSCURO Y PANEL DE USUARIO --- */
+body.dark-mode {
+    background-color: #121212 !important;
+    color: #e0e0e0 !important;
+}
+
+body.dark-mode .main-container, 
+body.dark-mode .main-container-listar,
+body.dark-mode .form-container,
+body.dark-mode .result-card {
+    background-color: #1e1e1e !important;
+    color: #e0e0e0 !important;
+    border-color: #444 !important;
+}
+
+/* El recuadro fijo arriba a la derecha */
+.user-control-panel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #ffffff;
+    padding: 8px 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 1px solid #ddd;
+    font-family: sans-serif;
+}
+
+body.dark-mode .user-control-panel {
+    background: #252525;
+    color: #fff;
+    border-color: #444;
+}
+
+.btn-mode {
+    cursor: pointer;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.btn-mode:hover { background: #e0e0e0; }
+
+body.dark-mode .btn-mode {
+    background: #333;
+    color: #fff;
+    border-color: #555;
+}
